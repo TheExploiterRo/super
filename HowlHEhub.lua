@@ -12,6 +12,16 @@ local SectionFour = Tab:NewSection("Everyone")
 Section:NewKeybind("Open GUI", "Keybind to opengui", Enum.KeyCode.Q, function()
 	Library:ToggleUI()
 end)
+Section:NewButton("10M","Give yourself 10M Only use in emergency", function()
+     local Mill = {
+			[1] = false,
+            [2] = 10000000,
+			[3] = "Cash",
+			[4] = plr
+		}
+
+		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(Mill))
+end)
 Section:NewButton("100k","Give yourself 100k", function()
      local OneHundred = {
 			[1] = false,
