@@ -12,18 +12,6 @@ local SectionFour = Tab:NewSection("Everyone")
 Section:NewKeybind("Open GUI", "Keybind to opengui", Enum.KeyCode.Q, function()
 	Library:ToggleUI()
 end)
-SectionFour:NewButton("Give money 5k","Gives everyone 5k",function()
-      for i, plr in pairs(game.Players:GetPlayers()) do
-		local EveryoneC = {
-			[1] = false,
-			[2] = 5000,
-			[3] = "Cash",
-			[4] = plr
-		}
-
-		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(EveryoneC))
-	end
-end)
 Section:NewButton("10M","Give yourself 10M Only use in emergency", function()
      local Mill = {
 			[1] = false,
@@ -55,6 +43,40 @@ SectionFour:NewButton("Takes away everyone money -5000","Except You",function()
 
 		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(EveryoneC))
 	end
+end)
+SectionFour:NewButton("Give money 5k","Gives everyone 5k",function()
+      for i, plr in pairs(game.Players:GetPlayers()) do
+		local EveryoneC = {
+			[1] = false,
+			[2] = 5000,
+			[3] = "Cash",
+			[4] = plr
+		}
+
+		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(EveryoneC))
+	end
+end)
+SectionFour:NewTextBox("Player Name","Enter Player name to give cash to",function(txt)
+     print(txt)
+     local SM = {
+			[1] = false,
+            [2] = 50000,
+			[3] = "Cash",
+			[4] = game.Players:FindFirstChild(txt)
+		}
+
+		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(SM))
+end)
+SectionFour:NewTextBox("Player Name","Enter Player name to remove cash from",function(txt)
+     print(txt)
+     local SM = {
+			[1] = false,
+            [2] = -50000,
+			[3] = "Cash",
+			[4] = game.Players:FindFirstChild(txt)
+		}
+
+		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(SM))
 end)
 Section:NewButton("50k","Give yourself 50k",function()
      local Fifty = {
