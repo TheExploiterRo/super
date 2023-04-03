@@ -139,3 +139,6 @@ SectionThree:NewButton("TP tool", "Gives you a tool that lets you teleport", fun
     end)
    tool.Parent = plr.Backpack
 end)
+SectionThree:NewButton("Enable Shift Lock","In case shift lock says set by dev",function()
+     game:GetService('Players').LocalPlayer.DevEnableMouseLock = true
+end)
