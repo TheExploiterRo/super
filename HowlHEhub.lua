@@ -56,7 +56,7 @@ SectionFour:NewButton("Give money 5k","Gives everyone 5k",function()
 		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(EveryoneC))
 	end
 end)
-SectionFour:NewTextBox("Player Name","Enter Player name to give cash to",function(txt)
+SectionFour:NewTextBox("Player Cash Add","Enter Player name to give cash to",function(txt)
      print(txt)
      local SM = {
 			[1] = false,
@@ -67,7 +67,7 @@ SectionFour:NewTextBox("Player Name","Enter Player name to give cash to",functio
 
 		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(SM))
 end)
-SectionFour:NewTextBox("Player Name","Enter Player name to remove cash from",function(txt)
+SectionFour:NewTextBox("Player Cash Remove","Enter Player name to remove cash from",function(txt)
      print(txt)
      local SM = {
 			[1] = false,
