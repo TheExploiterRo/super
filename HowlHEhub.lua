@@ -88,16 +88,6 @@ Section:NewButton("50k","Give yourself 50k",function()
 
 		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(Fifty))
 end)
-Section:NewButton("10Mk","Give yourself 10M Only use in emergency",function()
-     local Ten = {
-			[1] = false,
-            [2] = 10000000,
-			[3] = "Cash",
-			[4] = plr
-		}
-        
-		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(Ten))
-end)
 Section:NewButton("10k","Give yourself 10k",function()
      local Ten = {
 			[1] = false,
