@@ -142,3 +142,6 @@ end)
 SectionThree:NewButton("Enable Shift Lock","In case shift lock says set by dev",function()
      game:GetService('Players').LocalPlayer.DevEnableMouseLock = true
 end)
+SectionThree:NewButton("Animation GUI","Brings up a animation gui",function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/0MLPL32f'))()
+end)
